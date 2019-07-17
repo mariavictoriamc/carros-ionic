@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title padding>
+            Luxo
+        </ion-title>      
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosLuxo">
+        <button ion-item padding>{{carro.nome}}
+            <img padding src="{{carro.urlFoto}}">
+        </button>
+    </ion-card>
+</ion-content>

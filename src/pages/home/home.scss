@@ -1,0 +1,20 @@
+page-home {
+    /* ios */
+    .segment-ios .segment-button{color: #fff; opacity: 1; text-transform: uppercase; border: none; font-weight: 400;}
+    .toolbar-ios-primary .segment-ios .segment-button.segment-activated{color: #fff; border-bottom: 2px solid rgb(221, 57, 92);}
+    .toolbar-ios .segment-ios{height: 58px;}
+    .toolbar-ios .segment-button{height: 29px;}
+    /* android */
+    .segment-md .segment-button{color: #fff; opacity: 1; text-transform: uppercase; border: none; font-weight: 400;}
+    .segment-md .segment-button.activated, .toolbar .segment-md .segment-button.segment-activated{color: #fff; border-bottom: 2px solid rgb(221, 57, 92);}
+    .toolbar-md{padding: 0; min-height: 41px;}
+    /* windows */
+    .toolbar-wp{padding: 0; min-height: 41px;}
+    .segment-wp .segment-button{color: #fff; opacity: 1; text-transform: uppercase; border: none; font-weight: 400;}
+    .segment-wp .segment-button.segment-activated{color: #fff; border-bottom: 2px solid rgb(221, 57, 92);}
+
+    .SwipedTabs-indicatorSegment{-webkit-transition: 0.3s all; -moz-transition:  0.3s all; -o-transition:  0.3s all; transition:  0.3s all; transform-origin: top 0 left 0; height: 2px; position: relative; top: 0; background-color: rgb(221, 57, 92) !important;}
+    .SwipedTabs-tabs ion-segment-button{border:none !important; color:#fff!important;}
+    .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab{color:#fff !important;}
+    .swiper-slide{overflow-y: scroll; display: block;}
+}

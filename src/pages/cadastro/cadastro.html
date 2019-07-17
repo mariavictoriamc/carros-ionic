@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Novo Carro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card padding>
+    <form (ngSubmit)="salva()">
+      <ion-list radio-group [(ngModel)]="carro.tipo" [ngModelOptions]="{standalone: true}">
+        <ion-item>
+          <ion-label>Clássico</ion-label>
+          <ion-radio value="classico" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Esportivo</ion-label>
+          <ion-radio value="esportivo"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Luxo</ion-label>
+          <ion-radio value="luxo" [disabled]="isDisabled"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label color="dark" floating>Nome</ion-label>
+        <ion-input [(ngModel)]="carro.nome" name="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark" floating>Descrição</ion-label>
+        <ion-input [(ngModel)]="carro.desc" name="desc"></ion-input>
+      </ion-item>
+
+      <button ion-button block type="submit" class="btnSalvar">SALVAR</button>
+    </form>
+  </ion-card>
+</ion-content>

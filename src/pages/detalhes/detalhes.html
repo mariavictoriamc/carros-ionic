@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <img padding src="{{carro.urlFoto}}">
+        <ion-title padding>
+            Detalhes - Carros
+        </ion-title>      
+    </ion-navbar>
+    <ion-fab bottom right edge>
+        <button id="btnMudaCor" ion-fab color="dark" (click)="addFavorito(this.carro)">
+            <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-header>
+
+<ion-content>
+
+    <button ion-button block onclick="window.open('http://www.orimi.com/pdf-test.pdf', '_system', 'location=yes'); return false;">Open pdf</button>
+
+    <div class="titleCarroDetalhes">
+        <h4>{{ carro.nome }}</h4>
+    </div>
+    <ion-card>
+        <ion-card-header padding class="titlesPgDetalhes">
+            <ion-icon ios="ios-paper" md="md-paper" item-left></ion-icon> 
+            Descrição            
+        </ion-card-header>
+        <ion-card-content>
+            {{carro.desc}}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header padding class="titlesPgDetalhes">
+            <ion-icon ios="ios-videocam" md="md-videocam" item-left></ion-icon> 
+            Vídeo            
+        </ion-card-header>
+        <ion-card-content>
+            <video width="100%" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline">
+                <source src="{{carro.urlVideo}}" type="video/mp4" />
+            </video>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header padding class="titlesPgDetalhes">
+            <ion-icon ios="ios-map" md="md-map" item-left></ion-icon>  
+            Mapa            
+        </ion-card-header>
+    </ion-card>
+         
+    <div #map id="map"></div>    
+</ion-content>

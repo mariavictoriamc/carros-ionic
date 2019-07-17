@@ -1,0 +1,16 @@
+.item-wp, .item-md, .item-ios{padding: 0; border: none;}
+.list-md .item-block .item-inner{border: none;}
+.list-ios[inset] .item{border: none;}
+.icon-menu{margin: 0 10px 0 0;}
+.toolbar-title-md{padding: 0; text-transform: uppercase;}
+
+.ios ion-nav > .ion-page > .toolbar.statusbar-padding:first-child ion-segment, .ios ion-nav > .ion-page > .toolbar.statusbar-padding:first-child ion-title, .ios ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child ion-segment, .ios ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child ion-title, .ios ion-tab > .ion-page > ion-header > .toolbar.statusbar-padding:first-child ion-segment, .ios ion-tab > .ion-page > ion-header > .toolbar.statusbar-padding:first-child ion-title, .ios ion-tabs > .ion-page.tab-subpage > ion-header > .toolbar.statusbar-padding:first-child ion-segment, .ios ion-tabs > .ion-page.tab-subpage > ion-header > .toolbar.statusbar-padding:first-child ion-title, .ios ion-menu > .menu-inner > .toolbar.statusbar-padding:first-child ion-segment, .ios ion-menu > .menu-inner > .toolbar.statusbar-padding:first-child ion-title, .ios ion-menu > .menu-inner > ion-header > .toolbar.statusbar-padding:first-child ion-segment, .ios ion-menu > .menu-inner > ion-header > .toolbar.statusbar-padding:first-child ion-title{height: inherit; min-height: inherit;}
+.toolbar-ios ion-title{position: inherit; padding: 0;}
+.toolbar-title-ios{text-align: left; text-transform: uppercase;}
+
+.topo_bemVindo{padding: 15px;}
+.img-circle{border-radius: 50%;}
+.avatar{margin: 15px 0 0 0;}
+.infos_bemVindo{margin: 10px 0 0 0;}
+.infos_bemVindo h3{color: #fff; margin: 0;}
+.infos_bemVindo p{color: #fff; margin: 0;}

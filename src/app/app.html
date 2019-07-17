@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color="primary" class="topo_bemVindo">
+            <ion-title>Bem Vindo</ion-title>
+            <ion-avatar item-start class="avatar">
+                <img src="assets/img/avatar.jpg" class="img-circle">
+            </ion-avatar>
+            <div class="infos_bemVindo">
+                <h3>Maria</h3>
+                <p>maria@email.com.br</p>
+            </div>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content padding>
+        <ion-list inset>
+            <button menuClose ion-item (click)="home()"><ion-icon ios="ios-home" md="md-home" class="icon-menu"></ion-icon> Home</button>
+            <button menuClose ion-item (click)="classicos()"><ion-icon ios="ios-car" md="md-car" class="icon-menu"></ion-icon> Clássicos</button>
+            <button menuClose ion-item (click)="esportivos()"><ion-icon ios="ios-car" md="md-car" class="icon-menu"></ion-icon> Esportivos</button>
+            <button menuClose ion-item (click)="luxo()"><ion-icon ios="ios-car" md="md-car" class="icon-menu"></ion-icon> Luxo</button>
+            <button menuClose ion-item (click)="favoritos()"><ion-icon ios="ios-heart" md="md-heart" class="icon-menu"></ion-icon> Favoritos</button>
+            <button menuClose ion-item *ngFor="let pagina of paginas" (click)="abrePagina(pagina)">
+                {{ pagina.titulo }}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

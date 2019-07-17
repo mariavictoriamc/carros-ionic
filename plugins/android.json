@@ -1,0 +1,51 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-datepicker": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.ionicframework.aluracar550260"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    }
+  },
+  "dependent_plugins": {}
+}

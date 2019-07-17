@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Carros</ion-title>
+  </ion-navbar>
+
+  <!-- <ion-toolbar no-border-top color="primary">
+    <ion-segment [(ngModel)]="categoria">
+      <ion-segment-button value="classicos">
+        Clássicos
+      </ion-segment-button>
+      <ion-segment-button value="esportivos">
+        Esportivos
+      </ion-segment-button>
+      <ion-segment-button value="luxo">
+        Luxo
+      </ion-segment-button>
+      <ion-segment-button value="favoritos">
+        Favoritos
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar> -->
+
+  <ion-toolbar no-border-top color="primary">
+    <ion-segment  class="SwipedTabs-tabs"  >
+      <ion-segment-button *ngFor='let tab of tabs; let i = index' value="IngoreMe" (click)="selectTab(i)"
+      [ngClass]='{"SwipedTabs-activeTab" : (this.SwipedTabsSlider && (this.SwipedTabsSlider.getActiveIndex() === i || (tabs.length -1 === i && this.SwipedTabsSlider.isEnd())))}'>
+        {{tab}}
+      </ion-segment-button>
+    </ion-segment>
+    <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides #SwipedTabsSlider (ionSlideDrag)="animateIndicator($event)"
+                (ionSlideWillChange)="updateIndicatorPosition()"
+                (ionSlideDidChange)="updateIndicatorPosition()"
+                (pan)="updateIndicatorPosition()"
+                [pager]="false">  
+    <ion-slide>
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosClassicos">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosEsportivos">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosLuxo">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosFavoritados">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card> 
+    </ion-slide>
+  </ion-slides>
+
+  <!-- <div [ngSwitch]="categoria" >
+    <ion-list *ngSwitchCase="'classicos'">
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosClassicos">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'esportivos'">
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosEsportivos">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'luxo'">
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosLuxo">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'favoritos'">
+      <ion-card (click)="seleciona(carro)" *ngFor="let carro of carrosFavoritados">
+        <button ion-item padding>{{carro.nome}}
+          <img padding src="{{carro.urlFoto}}">
+        </button>
+      </ion-card> 
+    </ion-list>
+  </div>-->
+
+  <ion-fab bottom right>
+    <button (click)="cadastro()" ion-fab color="danger">
+      <ion-icon ios="ios-add" md="md-add"></ion-icon>
+    </button>
+  </ion-fab> 
+</ion-content>

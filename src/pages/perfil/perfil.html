@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card padding>
+    <ion-item>
+        <ion-avatar item-left *ngIf="url">
+          <img [src]="url">
+        </ion-avatar>
+        Maria
+        <button ion-button outline item-right (click)="tiraFoto()">
+            <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+        </button>
+    </ion-item>
+    <ion-item>
+      <p>31/01/1994</p>
+    </ion-item>
+    <ion-item>
+      <p>maria.carneiro@livetouch.com.br</p>
+    </ion-item>
+    <ion-item>
+      <p>(41) 99999-9999</p>
+    </ion-item>
+  </ion-card>
+</ion-content>
